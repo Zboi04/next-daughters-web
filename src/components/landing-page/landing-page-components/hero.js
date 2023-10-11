@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <animated.div
-      className="flex items-center justify-center w-full min-h-[500px] md:min-h-[785px] px-4 relative"
+      className="flex items-center justify-center w-full min-h-[500px] md:min-h-[785px] px-4 mb-[300px] md:mb-[200px] relative"
       style={fadeIn}
     >
       <div className="flex flex-col md:flex-row items-center justify-center w-full h-full">
@@ -29,7 +29,7 @@ export default function Hero() {
           className="flex flex-col items-center justify-center gap-6 gap-x-14 relative w-full"
           style={slideIn}
         >
-          <div className="relative w-fit mt-[-1.00px] text-shadow[-1px -1px 10px #48423a1a] font-bold text-text-color text-4xl md:text-5xl text-center tracking-[-2.40px] leading-[80px] whitespace-nowrap">
+          <div className="relative w-fit mb-4 md:mb-6 lg:mb-10 text-shadow[-1px -1px 10px #48423a1a] font-bold text-text-color text-3xl md:text-5xl lg:text-7xl text-center whitespace-nowrap">
             DOWNLOAD NOW
           </div>
           <div className="flex items-center justify-center gap-3 w-full md:w-[500px]">
@@ -50,18 +50,16 @@ export default function Hero() {
             A global initiative to mobilize a million Esther’s at the Wailing
           </p>
         </div>
-        <div className="flex items-center justify-center w-full md:w-auto h-auto md:h-full ml-0 md:ml-400">
-          <Image
-            alt="Daughters iPhone"
-            src="/static/landing-page/daughters-iphone.png"
-            width={284}
-            height={414}
-            placeholder="blur"
-            blurDataURL="/static/landing-page/daughters-iphone.png"
-            onLoad={() => setImageLoaded(true)}
-            layout="responsive"
-          />
-        </div>
+        <Image
+          className="w-[100px] h-[250px] md:w-[200px] md:h-[350px] lg:w-[450px] lg:h-[725px]"
+          alt="Daughters iPhone"
+          src="/static/landing-page/daughters-iphone-svg.svg"
+          width={100}
+          height={250}
+          placeholder="blur"
+          blurDataURL="/static/landing-page/daughters-iphone-svg.png"
+          onLoad={() => setImageLoaded(true)}
+        />
       </div>
     </animated.div>
   );
